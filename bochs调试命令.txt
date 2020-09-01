@@ -18,4 +18,11 @@ xp(eXamine memory at Physical address)
     2.每次只显示一个双字
     3.显示多个双字
         用"/"附加一个数量，并且指定一个物理内存地址
+
+
+info gdt
+    显示GDTR的内容
+
+creg
+    查看控制寄存器的内容
     
