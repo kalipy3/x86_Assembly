@@ -1,0 +1,21 @@
+bochs调试命令.txt
+
+:Author: kalipy
+:Email: kalipy@debian
+:Date: 2020-09-01 09:18
+
+下断点
+    b 0x7c00
+
+r
+    显示通用寄存器的内容
+
+sreg(segment register)
+    显示段寄存器的内容
+
+xp(eXamine memory at Physical address)
+    1.显示物理内存中的内容
+    2.每次只显示一个双字
+    3.显示多个双字
+        用"/"附加一个数量，并且指定一个物理内存地址
+    

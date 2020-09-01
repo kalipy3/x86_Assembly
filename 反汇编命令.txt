@@ -1,0 +1,11 @@
+反汇编命令.txt
+
+:Author: kalipy
+:Email: kalipy@debian
+:Date: 2020-09-01 09:34
+
+放汇编:
+    1.让反汇编后的xx.asm的汇编地址从0x7c00开始计算
+        ndisasmw -o 0x7c00 xx.bin >> xx.asm
+    2.让反汇编后的xx.asm的汇编地址从0开始计算
+        ndisasmw  xx.bin >> xx.asm

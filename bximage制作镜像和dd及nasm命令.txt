@@ -1,0 +1,21 @@
+bximage制作镜像和dd及nasm命令.txt
+
+:Author: kalipy
+:Email: kalipy@debian
+:Date: 2020-09-01 09:26
+
+软盘：
+    1.bximage命令创建fa.img
+    2.nasm -f bin source.asm -o out.bin
+    3.dd if=out.bin of=fa.img count=1 conv=notrunc
+    4.bochs失败，qemu -fda fa.img成功运行
+
+硬盘：
+    1.bximage命令创建hd.img(选择vpc类型)
+    2.nasm -f bin source.asm -o out.bin
+    3.dd if=out.bin of=hd.img count=1 conv=notrunc
+    4.bochs成功，qemu hd.img成功运行
+
+软盘制作的img镜像用bochs启动失败的原因推测：
+    bochsrcs.bxrc中配置不对，因为vpc的配置是直接从x86汇编配套教材里copy的，但是其他类型的不知道怎么配置，可以试试man bochs,好像有教材
+    
